@@ -6,15 +6,18 @@ import java.io.InputStreamReader;
 
 public class Main {
 
+    public static final int NUM_OF_PIECES = 4;
+
     public static void main(String[] args) throws IOException {
 
-        String inputArr [] = new String[4];
+        String inputArr [] = new String[NUM_OF_PIECES];
         int count = 0;
 
-       Treasure myTreasure = new Treasure(Colors.BLUE.toString(), Colors.GREEN.toString(),Colors.BLUE.toString(), Colors.RED.toString());
+       Treasure myTreasure = new Treasure(Colors.BLUE, Colors.GREEN,Colors.BLUE, Colors.RED);
 
         System.out.println("Start");
-       while (count<4) {
+
+       while (count < NUM_OF_PIECES) {
 
            System.out.println("Hadej barvy");
            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
