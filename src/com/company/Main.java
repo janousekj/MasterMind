@@ -3,6 +3,8 @@ package com.company;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -10,10 +12,17 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        String inputArr [] = new String[NUM_OF_PIECES];
+        Color inputArr [] = new Color[NUM_OF_PIECES];
         int count = 0;
 
-       Treasure myTreasure = new Treasure(Colors.BLUE, Colors.GREEN,Colors.BLUE, Colors.RED);
+        List<Color> colorList = new ArrayList<>();
+
+        colorList.add(Color.BLUE);
+        colorList.add(Color.RED);
+        colorList.add(Color.GREEN);
+        colorList.add(Color.ORANGE);
+
+        Treasure myTreasure = new Treasure(colorList);
 
         System.out.println("Start");
 
@@ -24,38 +33,32 @@ public class Main {
 
            String input = br.readLine();
 
-
-
            switch (input) {
                case "B":
-                   inputArr[count] = Colors.BLUE.toString();
-                   count++;
+                   inputArr[count] = Color.BLUE;
                    break;
                case "G":
-                   inputArr[count] = Colors.GREEN.toString();
-                   count++;
+                   inputArr[count] = Color.GREEN;
                    break;
                case "R":
-                   inputArr[count] = Colors.RED.toString();
-                   count++;
+                   inputArr[count] = Color.RED;
                    break;
                case "Y":
-                   inputArr[count] = Colors.YELLOW.toString();
-                   count++;
+                   inputArr[count] = Color.YELLOW;
                    break;
                case "P":
-                   inputArr[count] = Colors.PINK.toString();
-                   count++;
+                   inputArr[count] = Color.PINK;
                    break;
                case "O":
-                   inputArr[count] = Colors.ORANGE.toString();
-                   count++;
+                   inputArr[count] = Color.ORANGE;
                    break;
                default:
                    break;
            }
+
+           count++;
        }
-        CompareManager manager = new CompareManager(inputArr[0],inputArr[1], inputArr[2], inputArr[3], myTreasure);
+//        CompareManager manager = new CompareManager(inputArr[0],inputArr[1], inputArr[2], inputArr[3], myTreasure);
 
         }
 
