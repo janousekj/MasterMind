@@ -9,8 +9,11 @@ import java.util.List;
 public class Main {
 
     public static final int NUM_OF_PIECES = 4;
+    public static final int NUM_OF_ATTEMPS = 10;
 
     public static void main(String[] args) throws IOException {
+
+
 
         Color inputArr [] = new Color[NUM_OF_PIECES];
         int count = 0;
@@ -22,18 +25,35 @@ public class Main {
         colorList.add(Color.GREEN);
         colorList.add(Color.ORANGE);
 
+
+
         Treasure myTreasure = new Treasure(colorList);
+        CompareManager comparator = new CompareManager(myTreasure);
 
         System.out.println("Start");
 
-       while (count < NUM_OF_PIECES) {
 
-           System.out.println("Hadej barvy");
-           BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+       char inputChar=' ';
+    while (CompareManager.getAttempt()<NUM_OF_ATTEMPS) {
+    count=0;
+        while (count < NUM_OF_PIECES) {
 
-           String input = br.readLine();
+            System.out.println("Hadej barvy");
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-           switch (input) {
+            String input = br.readLine();
+            inputChar = input.charAt(0);
+            System.out.println(inputChar);
+            if (input.length() > 1) {
+                System.out.println("Lze zadat jen jedno znamenko");
+            } else if (colorList.contains(Color.parse(inputChar))) {
+
+                inputArr[count] = Color.parse(inputChar);
+                count++;
+
+            }
+
+           /*switch (input) {
                case "B":
                    inputArr[count] = Color.BLUE;
                    break;
@@ -54,11 +74,15 @@ public class Main {
                    break;
                default:
                    break;
-           }
+           }*/
 
-           count++;
-       }
-//        CompareManager manager = new CompareManager(inputArr[0],inputArr[1], inputArr[2], inputArr[3], myTreasure);
+
+        }
+
+        comparator.Compare(inputArr);
+    }
+
+
 
         }
 
