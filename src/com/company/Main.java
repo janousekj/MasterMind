@@ -10,6 +10,7 @@ public class Main {
 
     public static final int NUM_OF_PIECES = 4;
     public static final int NUM_OF_ATTEMPS = 10;
+    //pocet pokusu
 
     public static void main(String[] args) throws IOException {
 
@@ -17,6 +18,7 @@ public class Main {
 
         Color inputArr [] = new Color[NUM_OF_PIECES];
         int count = 0;
+
 
         List<Color> colorList = new ArrayList<>();
 
