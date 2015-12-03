@@ -34,59 +34,58 @@ public class Main {
 
         System.out.println("Start");
 
+        char inputChar=' ';
+        while (CompareManager.getAttempt()<NUM_OF_ATTEMPS) {
+            count=0;
+            while (count < NUM_OF_PIECES) {
 
-       char inputChar=' ';
-    while (CompareManager.getAttempt()<NUM_OF_ATTEMPS) {
-    count=0;
-        while (count < NUM_OF_PIECES) {
+                System.out.println("Hadej barvy");
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-            System.out.println("Hadej barvy");
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                String input = br.readLine();
+                inputChar = input.charAt(0);
+                System.out.println(inputChar);
+                if (input.length() > 1) {
+                    System.out.println("Lze zadat jen jedno znamenko");
+                } else if (colorList.contains(Color.parse(inputChar))) {
 
-            String input = br.readLine();
-            inputChar = input.charAt(0);
-            System.out.println(inputChar);
-            if (input.length() > 1) {
-                System.out.println("Lze zadat jen jedno znamenko");
-            } else if (colorList.contains(Color.parse(inputChar))) {
+                    inputArr[count] = Color.parse(inputChar);
+                    count++;
 
-                inputArr[count] = Color.parse(inputChar);
-                count++;
+                }
+
+               /*switch (input) {
+                   case "B":
+                       inputArr[count] = Color.BLUE;
+                       break;
+                   case "G":
+                       inputArr[count] = Color.GREEN;
+                       break;
+                   case "R":
+                       inputArr[count] = Color.RED;
+                       break;
+                   case "Y":
+                       inputArr[count] = Color.YELLOW;
+                       break;
+                   case "P":
+                       inputArr[count] = Color.PINK;
+                       break;
+                   case "O":
+                       inputArr[count] = Color.ORANGE;
+                       break;
+                   default:
+                       break;
+               }*/
+
 
             }
 
-           /*switch (input) {
-               case "B":
-                   inputArr[count] = Color.BLUE;
-                   break;
-               case "G":
-                   inputArr[count] = Color.GREEN;
-                   break;
-               case "R":
-                   inputArr[count] = Color.RED;
-                   break;
-               case "Y":
-                   inputArr[count] = Color.YELLOW;
-                   break;
-               case "P":
-                   inputArr[count] = Color.PINK;
-                   break;
-               case "O":
-                   inputArr[count] = Color.ORANGE;
-                   break;
-               default:
-                   break;
-           }*/
-
-
+            comparator.Compare(inputArr);
         }
 
-        comparator.Compare(inputArr);
+
+
     }
 
-
-
-        }
-
-    }
+}
 
