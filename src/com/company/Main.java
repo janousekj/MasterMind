@@ -53,7 +53,7 @@ public class Main {
                 }
             }
 
-            comparator.Compare(inputArr);
+            comparator.compare(inputArr);
 
             // TODO na priste poresit to jak spatne by se vas kod testoval,
             // napr jak byste testoval metodu compare?
