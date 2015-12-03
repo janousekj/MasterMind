@@ -57,17 +57,21 @@ public class Main {
 
             // TODO na priste poresit to jak spatne by se vas kod testoval,
             // napr jak byste testoval metodu compare?
-            // chtelo by to aby metoda compare vracela nejaky objekt s vysledek
+            // chtelo by to aby metoda compare vracela nejaky objekt s vysledkem
             // a az zde v mainu by se vysledek vypsal do konzole = zadnej print v compare
             // koncept toho jak by to mohlo bejt
-//            CompareResult cr = comparator.compare(inputArr);
-//            showCompareResult(cr)
+            CompareResult cr = comparator.compare(inputArr);
+            showCompareResult(cr);
             // CompareResult by se pak dal testovat a oddelite logiku programu od prezentace(vypisovani do konzole)
 
         }
 
 
 
+    }
+
+    private static void showCompareResult(CompareResult cr) {
+        // TODO vypsat vysledek
     }
 
 }
