@@ -22,7 +22,7 @@ public class Main {
 
         List<Color> colorList = new ArrayList<>();
 
-        colorList.add(Color.BLUE);
+        colorList.add(Color.ORANGE);
         colorList.add(Color.RED);
         colorList.add(Color.GREEN);
         colorList.add(Color.ORANGE);
