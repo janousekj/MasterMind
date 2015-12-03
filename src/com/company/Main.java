@@ -55,7 +55,7 @@ public class Main {
 
             comparator.Compare(inputArr);
 
-            // TODO priste budem resit to jak spatne by se vas kod testoval,
+            // TODO na priste poresit to jak spatne by se vas kod testoval,
             // napr jak byste testoval metodu compare?
             // chtelo by to aby metoda compare vracela nejaky objekt s vysledek
             // a az zde v mainu by se vysledek vypsal do konzole = zadnej print v compare
