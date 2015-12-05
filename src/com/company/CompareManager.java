@@ -21,7 +21,7 @@ public class CompareManager {
         return attempt;
     }
 
-    public void Compare(Color inputArr[]){
+    public void compare(Color inputArr[]){
         matchColors = 0;
         matchPositions=0;
 

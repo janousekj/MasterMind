@@ -14,8 +14,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-
-
         Color inputArr [] = new Color[NUM_OF_PIECES];
         int count = 0;
 
@@ -53,38 +51,27 @@ public class Main {
                     count++;
 
                 }
-
-               /*switch (input) {
-                   case "B":
-                       inputArr[count] = Color.BLUE;
-                       break;
-                   case "G":
-                       inputArr[count] = Color.GREEN;
-                       break;
-                   case "R":
-                       inputArr[count] = Color.RED;
-                       break;
-                   case "Y":
-                       inputArr[count] = Color.YELLOW;
-                       break;
-                   case "P":
-                       inputArr[count] = Color.PINK;
-                       break;
-                   case "O":
-                       inputArr[count] = Color.ORANGE;
-                       break;
-                   default:
-                       break;
-               }*/
-
-
             }
 
-            comparator.Compare(inputArr);
+            comparator.compare(inputArr);
+
+            // TODO na priste poresit to jak spatne by se vas kod testoval,
+            // napr jak byste testoval metodu compare?
+            // chtelo by to aby metoda compare vracela nejaky objekt s vysledkem
+            // a az zde v mainu by se vysledek vypsal do konzole = zadnej print v compare
+            // koncept toho jak by to mohlo bejt
+            CompareResult cr = comparator.compare(inputArr);
+            showCompareResult(cr);
+            // CompareResult by se pak dal testovat a oddelite logiku programu od prezentace(vypisovani do konzole)
+
         }
 
 
 
+    }
+
+    private static void showCompareResult(CompareResult cr) {
+        // TODO vypsat vysledek
     }
 
 }
