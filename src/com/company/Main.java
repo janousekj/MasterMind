@@ -1,5 +1,4 @@
 package com.company;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -53,7 +52,7 @@ public class Main {
                 }
             }
 
-            comparator.compare(inputArr);
+            //comparator.compare(inputArr);
 
             // TODO na priste poresit to jak spatne by se vas kod testoval,
             // napr jak byste testoval metodu compare?
@@ -71,7 +70,13 @@ public class Main {
     }
 
     private static void showCompareResult(CompareResult cr) {
-        // TODO vypsat vysledek
+    	if(cr.getCorrectColorAndPlace() != NUM_OF_PIECES){
+        System.out.println("Tefil jsi:" + cr.getCorrectColor() + " barev a " + cr.getCorrectColorAndPlace() + " pozic");
+    	}
+    	else{
+    		System.out.println("Jsi mastermind!");
+    		System.exit(0);
+    	}
     }
 
 }

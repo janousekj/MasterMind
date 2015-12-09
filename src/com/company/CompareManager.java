@@ -21,7 +21,7 @@ public class CompareManager {
         return attempt;
     }
 
-    public void compare(Color inputArr[]){
+    public CompareResult compare(Color inputArr[]){
         matchColors = 0;
         matchPositions=0;
 
@@ -45,8 +45,10 @@ public class CompareManager {
             }
         }
                     matchColors-=matchPositions;
+                    
+                return new CompareResult(matchColors,matchPositions);    
 
-        System.out.println("Trefil jsi " + matchColors + " barev " + " a " + matchPositions + " presnych pozic");
+        /*System.out.println("Trefil jsi " + matchColors + " barev " + " a " + matchPositions + " presnych pozic");
 
         if (matchPositions == 4){
             System.out.println("You are the mastermind!");
@@ -59,7 +61,7 @@ public class CompareManager {
             System.out.println("Prohral jsi!");
             System.exit(5);
       }
-
+*/
 
 
     }
